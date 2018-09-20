@@ -6,7 +6,7 @@
 `apt-get -y install curl wget make autoconf automake m4 bzip2 bison g++ libtool`
 #### Run
 ```
-wget https://github.com/ColineTeam/php-redis-bin/raw/master/compile.sh
+wget https://raw.githubusercontent.com/ColineTeam/php-redis-bin/master/compile.sh
 chmod +x compile.sh
 ./compile.sh
 ```
