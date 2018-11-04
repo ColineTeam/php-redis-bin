@@ -715,7 +715,7 @@ get_github_extension "yaml" "$EXT_YAML_VERSION" "php" "pecl-file_formats-yaml"
 
 get_github_extension "igbinary" "$EXT_IGBINARY_VERSION" "igbinary" "igbinary"
 
-get_github_extension "ds" "$EXT_DS_VERSION" "php-ds" "extension"
+get_github_extension "ds" "$EXT_DS_VERSION" "php-ds" "ext-ds"
 
 if [ "$COMPILE_LEVELDB" == "yes" ]; then
 	#PHP LevelDB
