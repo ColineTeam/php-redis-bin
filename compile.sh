@@ -937,6 +937,17 @@ make install >> "$DIR/install.log" 2>&1
 echo "extension=redis.so" >> "$DIR/bin/php7/bin/php.ini"
 echo " done!"
 
+echo -n "[swoole] checking..."
+cd "$DIR/install_data/php/ext/swoole"
+$DIR/bin/php7/bin/phpize >> "$DIR/install.log" 2>&1
+./configure --enable-sockets --with-php-config="$DIR/bin/php7/bin/php-config" >> "$DIR/install.log" 2>&1
+echo -n " compiling..."
+make -j4 >> "$DIR/install.log" 2>&1
+echo -n " installing..."
+make install >> "$DIR/install.log" 2>&1
+echo "extension=swoole.so" >> "$DIR/bin/php7/bin/php.ini"
+echo " done!"
+
 if [[ "$DO_STATIC" != "yes" ]] && [[ "$COMPILE_DEBUG" == "yes" ]]; then
 	echo -n "[xdebug] checking..."
 	cd "$DIR/install_data/php/ext/xdebug"
