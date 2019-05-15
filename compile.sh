@@ -707,6 +707,7 @@ fi
 
 #get_pecl_extension "ncurses" "$EXT_NCURSES_VERSION"
 get_pecl_extension "redis" "4.0.2"
+get_pecl_extension "swoole" "4.3.3"
 get_github_extension "pthreads" "$EXT_PTHREADS_VERSION" "pmmp" "pthreads" #"v" needed for release tags because github removes the "v"
 #get_pecl_extension "pthreads" "$EXT_PTHREADS_VERSION"
 
